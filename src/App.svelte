@@ -2,29 +2,21 @@
 	export let name;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div id="star1" class="star"></div>
+<div id="star2" class="star"></div>
+<div id="star3" class="star"></div>
+<div id="star4" class="star"></div>
+<div id="star5" class="star"></div>
+<div id="star6" class="star"></div>
+<div id="star7" class="star"></div>
+<div id="star8" class="star"></div>
+<div id="star9" class="star"></div>
+<div id="moon" class="star"></div>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<div id="sun"></div>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+<div id="title">From Dawn to {name}!</div>
+<button id="button" onclick="play()" title="Don't spam click it, it would play eventually">CLICK TO PLAY MUSIC</button>
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+
+<div id="mountain"></div>
