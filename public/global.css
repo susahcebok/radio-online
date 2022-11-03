@@ -1,63 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+@keyframes starFlicker {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes sunCycle {
+  0% {left: 50%;top:2%;}
+  25% {left: 90%; top: 50%;}
+  50% {left: 50%; top: 200%;}
+  75% {left: 10%; top: 50%;}
+  100% {left: 50%; top: 2%;}
+}
+
+@keyframes dayCycle {
+  0% {background-color: white;}
+  25% {background-color: #FAD6A5;}
+  50% {background-color: #323639;}
+  75% {background-color: #87CEEB;}
+  100% {background-color: white;}
+}
+
+@keyframes titleCycle {
+  0% {color: white;}
+  25% {color: black;}
+  50% {color: black;}
+}
+
 html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-family: Lato, sans-serif;
+  overflow: hidden;
+  user-select: none;
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  animation: dayCycle 20s infinite;
+  animation-timing-function: ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+#title {
+  animation: titleCycle 20s infinite;
+  z-index: 2;
+  color: white;
+  font-weight: bold;
+  font-size: xxx-large;
+  border-radius: 10px;
+  max-width: 50%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin: 1%;
+  text-align: center;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-a:hover {
-	text-decoration: underline;
+#mountain {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
 }
 
-a:visited {
-	color: rgb(0,80,160);
+#mountain:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background: rgb(46,52,64);
+  background: linear-gradient(to top, rgba(46,52,64,1) 80%, rgba(128,128,128,1) 95%, rgba(169,169,169,1) 100%);
+  transform: translate(85%, 60%);
 }
 
-label {
-	display: block;
+#mountain:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 70%;
+  height: 130%;
+  background: rgb(46,52,64);
+  background: linear-gradient(to top, rgba(46,52,64,1) 80%, rgba(128,128,128,1) 95%, rgba(169,169,169,1) 100%);
+  transform: translate(-20%, 60%);
+  z-index: -1;
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+#sun {
+  animation: sunCycle 20s infinite;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: 0 0 10px 5px white;
+  z-index: -5;
 }
 
-input:disabled {
-	color: #ccc;
+.star {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
+#star1 {
+  animation: starFlicker 1s infinite;
+  left: 10%;
+  top: 10%;
 }
 
-button:disabled {
-	color: #999;
+#star2 {
+  animation: starFlicker 2s infinite;
+  left: 30%;
+  top: 1%;
 }
 
-button:not(:disabled):active {
-	background-color: #ddd;
+#star3 {
+  animation: starFlicker 1s infinite;
+  left: 90%;
+  top: 30%;
 }
 
-button:focus {
-	border-color: #666;
+#star4 {
+  animation: starFlicker 3s infinite;
+  left: 60%;
+  top: 20%;
+}
+
+#star5 {
+  animation: starFlicker 6s infinite;
+  left: 25%;
+  top: 50%;
+}
+
+#star6 {
+  animation: starFlicker 1s infinite;
+  left: 75%;
+  top: 25%;
+}
+
+#star7 {
+  animation: starFlicker 5s infinite;
+  left: 80%;
+  top: 15%;
+}
+
+#star8 {
+  animation: starFlicker 1s infinite;
+  left: 1%;
+  top: 75%;
+}
+
+#star9 {
+  animation: starFlicker 2s infinite;
+  left: 25%;
+  top: 25%;
+}
+
+#moon {
+  background-color: #eaf4fc;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 5px 3px white;
+}
+
+#button {
+  z-index: 5;
+  background: transparent;
+  border: 1px solid;
+  font-family: Lato, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#button:active {
+  background: cyan;
+  color: black;
+  transform: scale(0.9);
 }
