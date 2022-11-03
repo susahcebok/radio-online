@@ -14,7 +14,7 @@
 	<link rel='icon' type='image/png' href='/favicon.ico'>
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
-        <link rel='/manifest' href='manifest.json'>
+        <link rel='manifest' href='/manifest.json'>
 
 	<script defer src='/build/bundle.js'></script>
 </head>
@@ -27,7 +27,7 @@
             window.location.protocol = 'https:';
         }*/
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/service-worker.js')
         }
         </script>
 </html>
