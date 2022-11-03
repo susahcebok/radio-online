@@ -15,7 +15,7 @@
 
 <div id="sun"></div>
 
-<div id="title">From Dawn to {name}!</div>
+<div id="title">Radio {name} FM Streaming</div>
 <button id="button" onclick="play()" title="Don't spam click it, it would play eventually">CLICK TO PLAY MUSIC</button>
 
 
