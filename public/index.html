@@ -16,4 +16,12 @@
 <body>
 </body>
         <script src='/radio.js'></script>
+        <script>
+        /*if (window.location.protocol === 'http:') {
+            window.location.protocol = 'https:';
+        }*/
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+        }
+        </script>
 </html>
